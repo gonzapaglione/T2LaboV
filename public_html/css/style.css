@@ -1,0 +1,42 @@
+/* 
+    Created on : 17 abr. 2025, 23:03:01
+    Author     : Gonzalo Lopez Paglione
+*/
+
+*{
+    font-family: sans-serif, arial;
+}
+
+
+.logo{
+    height: 75px;
+}
+
+header{
+    display: flex;
+    background-color: #ffc5c5;
+}
+
+header h1{
+    color: white;
+    
+}
+
+nav{
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #d9c1ff;
+}
+
+nav ul{
+    list-style: none;
+    display: inline-flex;
+    align-content: space-between;
+
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+
+}
