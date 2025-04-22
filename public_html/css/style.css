@@ -60,12 +60,13 @@ aside {
     margin: 0 auto;
     padding: 0px;
     display: flex;
-    min-width: 300px;
+    max-width: 300px;
     background-color: #ffc5c5;
 }
 
 aside p{
-    text-justify: auto;
+    padding: 10px;
+    text-align: center;
 }
 
 aside button{
@@ -120,6 +121,13 @@ aside button{
 }
 
 footer {
+    padding: 30px;
+    justify-content: space-between;
     display: flex;
     background-color: aquamarine;
+}
+
+.titulo{
+    font-size: 1.22em;
+    font-weight: 700;
 }

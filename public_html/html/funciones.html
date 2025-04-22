@@ -4,6 +4,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
 -->
 <html>
+
     <head>
         <title>Funciones</title>
         <meta charset="UTF-8">
@@ -11,30 +12,88 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <link rel="stylesheet" href="../css/estiloFunciones.css">
 
     </head>
+
     <body>
         <script src="../js/funciones.js"></script>
+        <div id="contenedor">
+            <header>
+                <img class="logo" src="../recursos/logo.jpg" alt="alt" />
+                <h1>Tarea practica 2</h1>
+            </header>
 
-        <div class="calcSimple">
-            <h2>Calculadora Simple</h2>
-            <p>Crear una función JS que se asemeje a una calculadora muy simple. <br>
-                permita el ingreso de dos valores, un operador y muestre el resultado</p>
-            <input class="boton" type="button" value="Probar" onclick="calcSimple()"/>   
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="conceptos.html">Concepto</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_responsive.asp" target="_blank">Estilos</a></li>
+                    <li><a href="funciones.html">Funciones</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <article class="consigna">
+                    <h2>Calculadora Simple</h2>
+                    <p>Crear una función JS que se asemeje a una calculadora muy simple. <br>
+                        permita el ingreso de dos valores, un operador y muestre el resultado</p>
+
+                    <h3>Valor 1:</h3>
+                    <input type="number" id="valor1">
+                    <h3>Valor 2:</h3>
+                    <input type="number" id="valor2">
+                    <h3>Operador:</h3>
+                    <select id="operador">
+                        <option value="sumar">Sumar</option>
+                        <option value="restar">Restar</option>
+                        <option value="mult">Multiplicar</option>
+                        <option value="divis">Dividir</option>
+                    </select>
+
+                    <input class="boton" type="button" value="calcular" onclick="calcSimple()" />
+                </article>
+
+                <article class="consigna">
+                    <h2>Cuadrado</h2>
+                    <p>Crear una función JS que permita dibujar un cuadrado <br>
+                        debe permitir el ingreso de un nro que indicará el tamaño de la figura y el símbolo que se mostrará.
+                    </p>
+                    <h3>Tamaño del cuadrado:</h3>
+                    <input type="number" id="tamCuad">
+                    <input class="boton" type="button" value="Generar" onclick="cuadrado()" />
+                </article>
+
+                <article class="consigna">
+                    <h2>Cuadrado fijo</h2>
+                    <p>Crear una función JS que permita mostrar 5 filas de 5 símbolos # separados por un espacio,<br>
+                        de manera que la 1er fila comience con # y la 2da con espacio:<br>
+                        Validar que no ingrese un valor mayor al tamaño de la pantalla.</p>
+                    <input class="boton" type="button" value="Generar" onclick="cuadrado5()" />
+                </article>
+
+                <article class="consigna">
+                    <h2>Cuadrado dinamico</h2>
+                    <p>
+                        Crear una función JS similar a la anterior pero que permita recibir como parámetro la cantidad de
+                        filas,<br>
+                        columnas y el símbolo que se desea imprimir. Permitir al usuario ingresar los valores y el símbolo.
+                    </p>
+
+                    <h3>Filas:</h3>
+                    <input type="number" id="filasCuad">
+                    <h3>Columnas:</h3>
+                    <input type="number" id="columnasCuad">
+                    <h3>Simbolo:</h3>
+                    <input type="text" id="simboloCuad">
+                    <input class="boton" type="button" value="Generar" onclick="cuadradoDinamico()" />
+                </article>
+
+            </section>
+
+            <footer>
+                <h3>Lopez Paglione Gonzalo</h3><br>
+                <p>22/04/25</p>
+            </footer>
         </div>
-
-        <div class="cuadrado">
-            <h2>Cuadrado</h2>
-            <p>Crear una función JS  que permita dibujar un cuadrado <br>
-             debe permitir el ingreso de un nro que indicará el tamaño de la figura y el símbolo que se mostrará.</p>
-            <input class="boton" type="button" value="Probar" onclick="cuadrado()"/>   
-        </div>
-
-
-
-
-
-
-
-
 
     </body>
+
 </html>

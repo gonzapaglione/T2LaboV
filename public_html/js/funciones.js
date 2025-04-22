@@ -1,93 +1,88 @@
 
 
 function calcSimple() {
-    alert("Elija una operacion:\n1.Sumar\n2.Restar\n3.Multiplicar\n4.Dividir");
-    var opc = parseInt(window.prompt("Ingrese la operacion: "));
-
     try {
+        let res;
 
-        switch (opc) {
-            case 1:
-                sumaSimple();
+        const num1 = parseInt(document.getElementById("valor1").value);
+        const num2 = parseInt(document.getElementById("valor2").value);
+        const operador = document.getElementById("operador").value;
+        switch (operador) {
+            case "sumar":
+                res = num1 + num2;
                 break;
 
-            case 2:
-                restaSimple();
+            case "restar":
+                res = num1 - num2;
                 break;
 
-            case 3:
-                multSimple();
+            case "mult":
+                res = num1 * num2;
                 break;
 
-            case 4:
-                divSimple();
-                break;
-
-            default:
-                alert("Opcion no valida");
+            case "divis":
+                if (num2 == 0) {
+                    throw new Error("No se puede dividir entre 0");
+                }
+                res = num1 / num2;
                 break;
         }
+
+        alert("El resultado es: " + res);
     } catch (error) {
-        alert("Error: " + error.message); // Mostrar el mensaje de error al usuario
+        alert("Error: " + error.message);
     }
-
-
-}
-
-function sumaSimple() {
-    var num1 = parseInt(window.prompt("Ingrese el primer valor: "));
-    var num2 = parseInt(window.prompt("Ingrese el segundo valor: "));
-    var res = num1 + num2;
-
-    alert(num1 + " + " + num2 + " = " + res);
-}
-
-function restaSimple() {
-    var num1 = parseInt(window.prompt("Ingrese el primer valor: "));
-    var num2 = parseInt(window.prompt("Ingrese el segundo valor: "));
-    var res = num1 - num2;
-
-    alert(num1 + " - " + num2 + " = " + res);
-}
-
-function divSimple() {
-    var num1 = parseInt(window.prompt("Ingrese el primer valor: "));
-    var num2 = parseInt(window.prompt("Ingrese el segundo valor: "));
-
-    if (num2 == 0) {
-        throw new Error("No se puede dividir entre 0");
-    }
-    var res = num1 / num2;
-
-    alert(num1 + " / " + num2 + " = " + res);
-}
-
-function multSimple() {
-    var num1 = parseInt(window.prompt("Ingrese el primer valor: "));
-    var num2 = parseInt(window.prompt("Ingrese el segundo valor: "));
-    var res = num1 * num2;
-
-    alert(num1 + " * " + num2 + " = " + res);
 }
 
 //Cuadrado
 
 function cuadrado() {
     try {
-        let cant = parseInt(window.prompt("Ingrese el tamaño del cuadrado"));
-        let simbolo = window.prompt("Ingrese el símbolo con el que desea dibujar");
+        const tamanio = parseInt(document.getElementById("tamCuad").value);
+        const tamAux = tamanio;
 
-        if (isNaN(cant) || cant <= 0) {
-            throw new Error("Tamaño no válido.");
+        if (tamanio > screen.width || tamanio > screen.height) {
+            throw new Error("El tamaño ingresado es mayor al tamaño de la pantalla.");
+        }
+        
+        var texto = "";
+        for (var i = 0; i < tamanio; i++) {
+            for (var j = 0; j < tamanio; j++) {
+                texto = texto + "#";
+            }
+            texto += "\n";
         }
 
-        let linea = simbolo.repeat(cant); // crea una línea con el símbolo repetido
+        alert(texto);
 
-        for (let i = 0; i < cant; i++) {
-            console.log(linea);
-        }
 
     } catch (error) {
         alert("Error: " + error.message);
     }
+}
+
+function cuadrado5() {
+    var texto = "";
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            texto = texto + "#";
+        }
+        texto = texto + "\n";
+    }
+    alert(texto);
+}
+
+function cuadradoDinamico() {
+    var texto = "";
+    var cant_filas = parseInt(document.getElementById("filasCuad").value);
+    var cant_columnas = parseInt(document.getElementById("columnasCuad").value);
+    var simb = document.getElementById("simboloCuad").value;
+    for (i = 0; i < cant_filas; i++) {
+        for (j = 0; j < cant_columnas; j++) {
+            texto = texto + simb;
+        }
+        texto = texto + "\n";
+    }
+
+    alert(texto);
 }
