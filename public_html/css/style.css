@@ -4,7 +4,7 @@
 */
 
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: sans-serif;
 }
 
 
@@ -20,13 +20,9 @@ body {
 #contenedor {
     margin: 0 auto;
     max-width: 1200px;
-    /* Limita el ancho máximo */
     background-color: #f9f9f9;
-    /* Fondo opcional */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra opcional */
     border-radius: 8px;
-    /* Bordes redondeados opcionales */
+
 }
 
 header {
@@ -60,17 +56,42 @@ nav ul a {
 
 }
 
-.biografia {
-    background-color: #c8ff96;
+aside {
+    margin: 0 auto;
+    padding: 0px;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    min-width: 300px;
+    background-color: #ffc5c5;
+}
+
+aside p{
+    text-justify: auto;
+}
+
+aside button{
+    max-height: 30px;
+    align-items: center;
+    align-content: center;
+}
+
+.biografia {
+    display: flex;
+    /* Flexbox para alinear elementos horizontalmente */
+    background-color: #c8ff96;
+    max-width: 1200px;
+    /* Aumenta el ancho máximo */
+    margin: 0 auto;
+    /* Centra el contenedor */
+    padding: 20px;
     gap: 20px;
+    /* Espacio entre columnas */
+    box-sizing: border-box;
+
 }
 
 .biografia article {
-    padding: 30px 0px 0px 20px;
-
+    padding: 30px;
+    background-color: #ffffcc;
 }
 
 .biografia p {
@@ -79,14 +100,26 @@ nav ul a {
 }
 
 
-.biografia p span{
+
+.biografia p span {
     font-size: 1.22em;
-    color: blueviolet;
     font-weight: 700;
 }
 
-.biografia img {
+.biografia a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.biografia a img {
+    position: left;
     margin: 50px;
     border: solid rgb(248, 143, 255) 5px;
     border-radius: 5px;
+}
+
+footer {
+    display: flex;
+    background-color: aquamarine;
 }
